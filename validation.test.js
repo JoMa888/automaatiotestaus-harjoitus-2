@@ -13,3 +13,8 @@ test("validateEmail hyväksyy tavallisen sähköpostiosoitteen", () => {
 
   assert.strictEqual(result, true);
 });
+
+
+test("validateEmail hylkää sähköpostin ilman @-merkkiä", () => {
+  assert.strictEqual(validateEmail("opiskelija.example.com"), false);
+});
