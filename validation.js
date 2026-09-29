@@ -1,7 +1,10 @@
 export function validateEmail(email) {
   return typeof email === "string" &&
     email.includes("@") &&
-    email.includes(".");
+    email.includes(".") &&
+    email.indexOf("@") > 0 &&
+    email.indexOf("@") < email.lastIndexOf(".") &&
+    email.lastIndexOf(".") < email.length - 1;
 }
 
 export function validatePassword(password) {
