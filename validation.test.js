@@ -33,3 +33,8 @@ test("validatePassword hyväksyy vähintään 8 merkkiä pitkän salasanan", () 
 test("validateAge hyväksyy iän 18", () => {
   assert.strictEqual(validateAge(18), true);
 });
+
+
+test("validateAge hylkää iän 15", () => {
+  assert.strictEqual(validateAge(15), false);
+});
