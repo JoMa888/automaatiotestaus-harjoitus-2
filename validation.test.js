@@ -18,3 +18,8 @@ test("validateEmail hyväksyy tavallisen sähköpostiosoitteen", () => {
 test("validateEmail hylkää sähköpostin ilman @-merkkiä", () => {
   assert.strictEqual(validateEmail("opiskelija.example.com"), false);
 });
+
+
+test("validatePassword hylkää liian lyhyen salasanan", () => {
+  assert.strictEqual(validatePassword("sala123"), false);
+});
