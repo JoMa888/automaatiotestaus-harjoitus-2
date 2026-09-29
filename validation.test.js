@@ -23,3 +23,8 @@ test("validateEmail hylkää sähköpostin ilman @-merkkiä", () => {
 test("validatePassword hylkää liian lyhyen salasanan", () => {
   assert.strictEqual(validatePassword("sala123"), false);
 });
+
+
+test("validatePassword hyväksyy vähintään 8 merkkiä pitkän salasanan", () => {
+  assert.strictEqual(validatePassword("salasana"), true);
+});
