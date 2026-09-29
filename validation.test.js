@@ -43,3 +43,20 @@ test("validateAge hylkää iän 15", () => {
 test("validateAge hylkää iän 121", () => {
   assert.strictEqual(validateAge(121), false);
 });
+
+
+test("validateEmail hylkää tyhjän sähköpostin", () => {
+  assert.strictEqual(validateEmail(""), false);
+});
+
+test("validatePassword hylkää tyhjän salasanan", () => {
+  assert.strictEqual(validatePassword(""), false);
+});
+
+test("validateAge hylkää merkkijonon 18", () => {
+  assert.strictEqual(validateAge("18"), false);
+});
+
+test("validateAge hylkää desimaali-iän 18.5", () => {
+  assert.strictEqual(validateAge(18.5), false);
+});
