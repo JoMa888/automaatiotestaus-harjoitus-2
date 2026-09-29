@@ -60,3 +60,8 @@ test("validateAge hylkää merkkijonon 18", () => {
 test("validateAge hylkää desimaali-iän 18.5", () => {
   assert.strictEqual(validateAge(18.5), false);
 });
+
+
+test("validateEmail hylkää virheellisen osoitteen @test.", () => {
+  assert.strictEqual(validateEmail("@test."), false);
+});
